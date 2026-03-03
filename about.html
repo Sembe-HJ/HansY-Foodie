@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+  <style>
+  body {
+    padding-top: 80px;
+}
+  .reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+  html {
+    scroll-behavior: smooth;
+}
+  .navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+}
+  .hero {
+    background-attachment: fixed;
+}
+  @media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+}
+  body.dark-mode {
+    background: #111;
+    color: #eee;
+}
+
+body.dark-mode .navbar.scrolled {
+    background: rgba(0,0,0,0.9);
+}
+
+body.dark-mode .menu-item,
+body.dark-mode .why-card {
+    background: rgba(255,255,255,0.05);
+}
+  .card, .menu-item, .why-card {
+    transition: 0.3s ease;
+}
+
+.card:hover, .menu-item:hover, .why-card:hover {
+    transform: translateY(-8px);
+}
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #ff6600;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+    z-index: 999;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px);
+}
+
+/* Show button */
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dark mode */
+body.dark-mode #backToTop {
+    background: #ff8800;
+}
+  @media (max-width: 768px) {
+    #backToTop {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+.about-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('pcs/bg6.png') center/cover no-repeat;
+}
+.logo img {
+    width: auto;
+    height: 100px;
+}
+.logo h2 {
+    font-size: 25px;
+    color: #4fb9af;
+    margin: 0;
+}
+
+.about-hero {
+margin-top: 60px;
+}
+
+.navbar {
+    top: 0;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+.navbar a {
+    color: #4fb9af;
+}
+.navbar a:hover {
+    color: #0f8d82;
+    text-decoration: line-through;
+}
+.navbar a:active {
+    color: #d1eeea;
+}
+
+  </style>
+  
+  
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <div class="logo"> 
+            <img src="pcs/logo.png">
+            <h2>HansY Foodie </h2>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button id="theme-toggle">🌙</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="about-hero">
+    <div class="about-hero-content">
+        <h1>About Our Restaurant</h1>
+        <p>Passion. Quality. Experience.</p>
+    </div>
+</section>
+
+<section class="about-story reveal">
+    <div class="about-container">
+
+        <div class="about-image">
+            <img id="aboutImg" src="pcs/back7.png" alt="Our Restaurant">
+        </div>
+
+        <div class="about-text">
+            <h2>Our Story</h2>
+            <p>
+                Founded with passion and dedication, our restaurant was created to bring people together
+                through delicious meals and unforgettable experiences.
+            </p>
+
+            <p>
+                We focus on fresh ingredients, authentic recipes, and exceptional service.
+                Every dish is prepared with care to ensure the highest quality and taste.
+            </p>
+
+            <p>
+                Whether you are here for breakfast, lunch, dinner, or drinks,
+                we promise comfort, flavor, and satisfaction.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="why-us reveal">
+    <h2>Why Choose Us</h2>
+    <div class="why-grid">
+        <div class="why-card">
+            <h3>Fresh Ingredients</h3>
+            <p>We use only fresh and high-quality ingredients daily.</p>
+        </div>
+        <div class="why-card">
+            <h3>Expert Chefs</h3>
+            <p>Our chefs bring experience and creativity to every plate.</p>
+        </div>
+        <div class="why-card">
+            <h3>Cozy Environment</h3>
+            <p>Modern, comfortable space for family and friends.</p>
+        </div>
+        <div class="why-card">
+            <h3>Fast Service</h3>
+            <p>Quick, professional, and friendly service every time.</p>
+        </div>
+    </div>
+</section>
+
+<section class="stats reveal">
+    <div class="stats-grid">
+        <div class="stat">
+            <h3>10+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat">
+            <h3>5000+</h3>
+            <p>Happy Customers</p>
+        </div>
+        <div class="stat">
+            <h3>100+</h3>
+            <p>Menu Items</p>
+        </div>
+        <div class="stat">
+            <h3>4.8★</h3>
+            <p>Customer Rating</p>
+        </div>
+    </div>
+</section>
+  
+  
+  <footer style="color: #4fb9af;">
+    <p>© 2026 HansY Foodie | Designed by Sembe HJ</p>
+</footer>
+  
+ <button id="backToTop"> ↑ </button>
+  
+<script src="js/script.js"></script>
+  <script>
+  const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    reveals.forEach(reveal => {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveal.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (revealTop < windowHeight - revealPoint) {
+            reveal.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+  
+  const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const backToTop = document.getElementById("backToTop");
+
+    if (!backToTop) return; // safety check
+
+    // Show / hide button
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+
+    // Scroll to top
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+});
+
+  const images = [
+    "pcs/bg1.png",
+    "pcs/bg2.png",
+    "pcs/bg6.png",
+    "pcs/bg9.png"
+  ];
+  let index = 0;
+  const aboutImg =
+  document.getElementById("aboutImg");
+
+  setInterval(() => {
+    aboutImg.style.opacity = 0;
+
+    setTimeout(() => {
+        index = (index + 1) % images.length;
+        aboutImg.src = images[index];
+        aboutImg.style.opacity = 1;
+    },500);
+  },3000);
+
+  </script>
+  
+</body>
+</html>

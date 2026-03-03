@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+  <style>
+  body {
+    padding-top: 90px;
+}
+  .contact-hero {
+    height: 40vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('pcs/bg2.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #14b8a6;
+    margin-top: 93px;
+}
+
+.contact-container {
+    display: list;
+    gap: 3rem;
+    padding: 4rem 8%;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1.1rem;
+    flex: 1;
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 70px;
+}
+
+.info-card {
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.05);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #ff6600;
+}
+
+.contact-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #ff6600;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+}
+
+#formMessage {
+    margin-top: 10px;
+    font-weight: 600;
+}
+  @media (max-width: 768px) {
+
+    .contact-container {
+        flex-direction: column;
+        padding: 2rem 5%;
+    }
+
+    .contact-hero {
+        height: 30vh;
+    }
+}
+  
+  body.dark-mode .info-card {
+    background: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .input-group input,
+body.dark-mode .input-group textarea {
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+}
+  /* Contact Popup */
+.contact-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 2000;
+}
+
+.contact-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-popup-content {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    transform: scale(0.7);
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.contact-popup.active .contact-popup-content {
+    transform: scale(1);
+}
+
+.popup-icon {
+    font-size: 50px;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.popup-btn {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #ff6600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.popup-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Dark Mode */
+body.dark-mode .contact-popup-content {
+    background: #222;
+    color: white;
+}
+
+.navbar {
+    top: 0;
+    padding: 29px;
+    margin-bottom: 0;
+}
+.navbar a {
+    color: #4fb9af;
+}
+.navbar a:hover {
+    color: #0f8d82;
+    text-decoration: line-through;
+}
+.navbar a:active {
+    color: #d1eeea;
+}
+  .logo img {
+    height: 100px;
+    width: auto;
+  }
+  .logo h2 {
+    color: #14b8a6;
+  }
+footer {
+  color: #4fb9af;
+}
+  
+  </style>
+  </head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="pcs/logo.png">
+         <h2>HansY Foodie</h2></div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button id="theme-toggle">🌙</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="contact-hero reveal">
+    <div class="contact-hero-content">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you</p>
+    </div>
+</section>
+
+<section class="contact-section reveal">
+    <div class="contact-container">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <div class="info-card">
+                <h3>📍 Location</h3>
+                <p>123 Main Street, City</p>
+            </div>
+
+            <div class="info-card">
+                <h3>📞 Phone</h3>
+                <p>+123 456 7890</p>
+            </div>
+
+            <div class="info-card">
+                <h3>📧 Email</h3>
+                <p>info@restaurant.com</p>
+            </div>
+
+            <div class="info-card">
+                <h3>⏰ Opening Hours</h3>
+                <p>Mon - Sun: 8AM - 10PM</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form id="contactForm">
+
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Your Name">
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Your Email">
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="subject" placeholder="Subject">
+                </div>
+
+                <div class="input-group">
+                    <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                </div>
+
+                <button type="submit" class="contact-btn">Send Message</button>
+
+                <p id="formMessage"></p>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+<div class="contact-popup" id="contactPopup">
+    <div class="contact-popup-content">
+        <span class="close-popup" id="closePopup">&times;</span>
+        <div class="popup-icon">✔</div>
+        <h2>Message Sent!</h2>
+        <p>Thank you for contacting us. We will get back to you soon.</p>
+        <button class="popup-btn" id="popupOk">OK</button>
+    </div>
+</div>
+  <footer>
+    <p>© 2026 HansY Foodie | Designed by Sembe HJ</p>
+</footer>
+  
+<script src="js/script.js"></script>
+  <script>
+ document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("contactPopup");
+    const closePopup = document.getElementById("closePopup");
+    const popupOk = document.getElementById("popupOk");
+
+    if (!form || !popup) return;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        popup.classList.add("active");
+        form.reset();
+    });
+
+    if (closePopup) {
+        closePopup.addEventListener("click", function () {
+            popup.classList.remove("active");
+        });
+    }
+
+    if (popupOk) {
+        popupOk.addEventListener("click", function () {
+            popup.classList.remove("active");
+        });
+    }
+
+    popup.addEventListener("click", function (e) {
+        if (e.target === popup) {
+            popup.classList.remove("active");
+        }
+    });
+
+});
+   </script>
+  
+</body>
+</html>

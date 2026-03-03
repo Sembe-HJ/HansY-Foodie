@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .logo {
+            left: 0;
+        }
+        .logo img {
+    width: auto;
+    height: 100px;
+}
+.logo h1 {
+    font-size: 25px;
+    margin: 0;
+    color: #4fb9af;
+}
+.nav-links a {
+    color: #14b8a6;
+}
+.nav-links a:hover {
+    color: #0f8d82;
+    text-decoration: line-through;
+}
+.nav-links a:active {
+    color: #d1eeea;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0 / 0.3);
+}
+
+    </style>
+</head>
+<body>
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="pcs/logo.png">
+        <h1> HansY Foodie </h1></div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button id="theme-toggle">🌙</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="menu-hero">
+    <h1>Our Delicious Menu</h1>
+</section>
+
+<section class="menu-section">
+
+    <section class="menu-section">
+
+    <div class="menu-grid-wrapper"> 
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+            <button class="filter-btn" data-filter="lunch">Lunch</button>
+            <button class="filter-btn" data-filter="dinner">Dinner</button>
+            <button class="filter-btn" data-filter="drinks">Drinks</button>
+        </div>
+
+    <div class="menu-grid">
+
+        <!-- Breakfast Items -->
+        <div class="menu-item breakfast">
+            <img src="pcs/pancake deluxe.jpg" alt="Pancake Deluxe">
+            <h3>Pancake Deluxe</h3>
+            <p>Fluffy pancakes with honey & berries.</p>
+            <span>$12</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item breakfast">
+            <img src="pcs/french.jpg" alt="French Toast">
+            <h3>French Toast</h3>
+            <p>Crispy toast with cinnamon sugar.</p>
+            <span>$11</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item breakfast">
+            <img src="pcs/veggie omelette.jpg" alt="Veggie Omelette">
+            <h3>Veggie Omelette</h3>
+            <p>Egg omelette with fresh veggies.</p>
+            <span>$10</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item breakfast">
+            <img src="pcs/waffle stack.jpg" alt="Waffle Stack">
+            <h3>Waffle Stack</h3>
+            <p>Classic waffles with maple syrup.</p>
+            <span>$12</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item breakfast">
+            <img src="pcs/bagel.png" alt="Bagel & Cream Cheese">
+            <h3>Bagel & Cream Cheese</h3>
+            <p>Freshly baked bagels with cream cheese.</p>
+            <span>$8</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item breakfast">
+            <img src="pcs/yogurt.png" alt="Yogurt Parfait">
+            <h3>Yogurt Parfait</h3>
+            <p>Layered yogurt with granola & fruits.</p>
+            <span>$9</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+
+        <!-- Lunch Items -->
+        <div class="menu-item lunch">
+            <img src="pcs/burger2.jpg" alt="Chicken Burger">
+            <h3>Chicken Burger</h3>
+            <p>Grilled chicken with special sauce.</p>
+            <span>$15</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item lunch">
+            <img src="pcs/club sandwich.png" alt="Club Sandwich">
+            <h3>Club Sandwich</h3>
+            <p>Triple layer sandwich with ham & veggies.</p>
+            <span>$14</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item lunch">
+            <img src="pcs/salad.png" alt="Caesar Salad">
+            <h3>Caesar Salad</h3>
+            <p>Crispy lettuce with Caesar dressing.</p>
+            <span>$12</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item lunch">
+            <img src="pcs/pasta alfredo.jpg" alt="Pasta Alfredo">
+            <h3>Pasta Alfredo</h3>
+            <p>Creamy pasta with parmesan cheese.</p>
+            <span>$16</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item lunch">
+            <img src="pcs/burger3.jpg" alt="Beef Burger">
+            <h3>Beef Burger</h3>
+            <p>Classic beef burger with cheddar.</p>
+            <span>$15</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item lunch">
+            <img src="pcs/grilled chicken.png" alt="Grilled Chicken">
+            <h3>Grilled Chicken</h3>
+            <p>Served with fresh veggies & sauce.</p>
+            <span>$17</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+
+        <!-- Dinner Items -->
+        <div class="menu-item dinner">
+            <img src="pcs/grilled steak.png" alt="Grilled Steak">
+            <h3>Grilled Steak</h3>
+            <p>Premium beef steak with herbs.</p>
+            <span>$25</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item dinner">
+            <img src="pcs/baked salmon.png" alt="Baked Salmon">
+            <h3>Baked Salmon</h3>
+            <p>Salmon fillet with lemon butter.</p>
+            <span>$22</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item dinner">
+            <img src="pcs/pasta marinara.png" alt="Pasta Marinara">
+            <h3>Pasta Marinara</h3>
+            <p>Rich tomato pasta with basil.</p>
+            <span>$20</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item dinner">
+            <img src="pcs/ribeye.png" alt="Ribeye Steak">
+            <h3>Ribeye Steak</h3>
+            <p>Juicy ribeye grilled to perfection.</p>
+            <span>$28</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item dinner">
+            <img src="pcs/vegetable.png" alt="Vegetarian Plate">
+            <h3>Vegetarian Plate</h3>
+            <p>Grilled veggies with quinoa & sauce.</p>
+            <span>$18</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item dinner">
+            <img src="pcs/lamb chop.png" alt="Lamb Chop">
+            <h3>Lamb Chop</h3>
+            <p>Served with rosemary & garlic.</p>
+            <span>$26</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+
+        <!-- Drinks Items -->
+        <div class="menu-item drinks">
+            <img src="pcs/orange.png" alt="Orange Juice">
+            <h3>Orange Juice</h3>
+            <p>Freshly squeezed orange juice.</p>
+            <span>$6</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item drinks">
+            <img src="pcs/mango.png" alt="Mango Juice">
+            <h3>Mango Juice</h3>
+            <p>Sweet tropical mango juice.</p>
+            <span>$6</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item drinks">
+            <img src="pcs/cola.png" alt="Cola Drink">
+            <h3>Cola</h3>
+            <p>Classic fizzy drink.</p>
+            <span>$3</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item drinks">
+            <img src="pcs/iced tea.png" alt="Iced Tea">
+            <h3>Iced Tea</h3>
+            <p>Refreshing iced tea with lemon.</p>
+            <span>$4</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item drinks">
+            <img src="pcs/coffee.png" alt="Coffee">
+            <h3>Coffee</h3>
+            <p>Hot brewed coffee.</p>
+            <span>$4</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+        <div class="menu-item drinks">
+            <img src="pcs/fruit.png" alt="Fruit Smoothie">
+            <h3>Fruit Smoothie</h3>
+            <p>Mixed fresh fruits smoothie.</p>
+            <span>$5</span>
+            <button class="order-btn">Add to Order</button>
+        </div>
+
+    </div>
+</section>
+
+<div class="popup" id="popup">
+    <p>Item added successfully!</p>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

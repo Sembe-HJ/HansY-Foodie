@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('pcs/back2.png') center/cover no-repeat;
+            }
+        .navbar, .nav-links,
+        .hero-content {
+            color: #14b8a6;
+        }
+
+       .nav-links a
+        {
+            color: #14b8a6;
+       }
+       .nav-links a:hover,
+       .btn-primary a:hover {
+            color: #0f8f82;
+            text-decoration: line-through;
+       }
+       .nav-links a:active,
+       .btn-primary a:active {
+            color: #d1eeea;
+       }
+       .btn-primary a {
+            color: inherit;
+            text-decoration: none;
+       }
+.logo img {
+    width: auto;
+    height: 100px;
+}
+.logo h1 {
+    font-size: 20px;
+    margin: 0;
+}
+.stats {
+    background: #037c6e;
+}
+
+body.dark-mode .stats h2 {
+    color: white;
+}
+body.dark-mode .stats p {
+    color: red;
+}
+
+footer {
+    color: #4fb9af;
+}
+
+
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        
+        <div class="logo">
+            <img src="pcs/logo.png">
+            <h1> HansY Foodie </h1>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button id="theme-toggle">🌙</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Taste the Fire.<br>Feel the Flavor.</h1>
+        <p>Experience premium dining crafted with passion.</p>
+        <div class="hero-buttons">
+            <button class="btn-primary"><a href="menu.html">View Menu</a></button>
+            <button class="btn-secondary">Reserve Table</button>
+        </div>
+    </div>
+</section>
+  <section class="about-preview reveal">
+    <div class="about-text">
+        <h2>Our Story</h2>
+        <p>At Sailor's Flame, we blend tradition and innovation
+        to deliver unforgettable culinary experiences.</p>
+        <button class="btn-primary"><a href="contact.html"> Learn More </a></button>
+    </div>
+</section>
+  
+  <section class="stats reveal">
+    <div class="stat-box">
+        <h2>10+</h2>
+        <p>Years Experience</p>
+    </div>
+    <div class="stat-box">
+        <h2>5000+</h2>
+        <p>Happy Customers</p>
+    </div>
+    <div class="stat-box">
+        <h2>50+</h2>
+        <p>Signature Dishes</p>
+    </div>
+</section>
+
+<section class="featured reveal">
+    <h2>Featured Dishes</h2>
+    <div class="cards">
+      
+        <div class="card">
+    <img src="pcs/steak.jpg">
+    <div class="card-content">
+        <h3>Grilled Steak</h3>
+        <p>Juicy flame grilled beef steak.</p>
+        <span>$25</span>
+    </div>
+</div>
+        <div class="card">
+          <img src="pcs/seafood.jpg">
+          <div class="card-content">
+            <h3>Seafood Pasta</h3>
+            <p>Fresh ocean flavors with creamy sauce.</p>
+            <span>$18</span>
+        </div>
+        </div>
+      
+        <div class="card">
+          <img src="pcs/burger2.jpg">
+          <div class="card-content">
+            <h3>Classic Burger</h3>
+            <p>Signature burger with special sauce.</p>
+            <span>$15</span>
+        </div>
+        </div>
+    </div>
+</section>
+   <a href="menu.html" class="floating-btn">Order</a>
+  
+  <section class="testimonials reveal">
+    <div class="testimonial active-slide">
+        <p>"Best dining experience in town!"</p>
+        <h4>- Michael</h4>
+    </div>
+    <div class="testimonial">
+        <p>"Amazing flavors and great service."</p>
+        <h4>- Sarah</h4>
+    </div>
+</section>
+
+<section class="cta reveal">
+    <h2>Ready for an unforgettable dining experience?</h2>
+    <button class="btn-primary"><a href="menu.html">  Book Now </a></button>
+</section>
+
+<footer>
+    <p>© 2026 HansY Foodie | Designed by Sembe HJ</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
